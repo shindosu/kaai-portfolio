@@ -105,3 +105,8 @@ a {
     color-scheme: dark;
   }
 }
+
+@font-face {
+  font-family: 'Rosalindale Condensed Regular';
+  src: url('https://site-assets.plasmic.app/a6d800e68fa1ee97b62689ff54c0e7b1.ttf')
+}
