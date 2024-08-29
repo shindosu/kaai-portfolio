@@ -26,5 +26,5 @@ export function WorkSlider( { className }: WorkSliderProps) {
             <SwiperSlide>Slide 8</SwiperSlide>
             <SwiperSlide>Slide 9</SwiperSlide>
         </Swiper>
-);
+    );
 }

@@ -1,11 +1,9 @@
-import * as React from 'react';
 import { PlasmicCanvasHost } from '@plasmicapp/loader-nextjs';
-import {registerComponent} from "@plasmicapp/host";
 import { PLASMIC } from '@/plasmic-init';
 import { HelloWorld } from "@/components/HelloWorld";
 import { WorkSlider } from "@/components/WorkSlider.jsx";
 
-registerComponent(HelloWorld, {
+PLASMIC.registerComponent(HelloWorld, {
   name: "HelloWorld",
   props: {
     className: 'string',
@@ -14,7 +12,7 @@ registerComponent(HelloWorld, {
   importPath: './components/HelloWorld',
 })
 
-registerComponent(WorkSlider, {
+PLASMIC.registerComponent(WorkSlider, {
   name: "WorkSlider",
   props: {
     className: 'string',
