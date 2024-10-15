@@ -1,0 +1,76 @@
+/* navbar.module.scss */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  z-index: 60;
+}
+
+/* For large screens, show nav links, hide hamburger */
+.navLinks {
+  display: none;
+
+  @media (min-width: 834px) {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: block;
+  z-index: 60;
+
+  @media (min-width: 834px) {
+    display: none;
+  }
+}
+
+/* Mobile Menu: with animation */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%; /* Start off-screen */
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(248, 244, 236); /* #F8F4EC with opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: left 0.3s ease-in-out; /* Smooth transition */
+  z-index: 50; /* To avoid overlapping with other elements */
+
+  @media (min-width: 834px) {
+    display: none;
+  }
+
+  /* When the menu is open, we slide it into the view */
+  &.open {
+    left: 0; /* Slide it into view */
+  }
+}
+
+// .mobileNavLinks {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 2rem;
+//   text-align: center;
+//   color: #333;
+//   font-size: 2rem;
+// }

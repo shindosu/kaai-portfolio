@@ -1,0 +1,46 @@
+@import '../global_variable.scss';
+
+.service {
+  display: flex;
+  // align-items: flex-start;
+  gap: 32px;
+  justify-content: space-between;
+  // flex-wrap: wrap;
+
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.serviceImage {
+  aspect-ratio: 0.77;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  max-width: 784px;
+  height: auto;
+  // min-width: 240px;
+}
+
+.serviceContent {
+  // display: flex;
+  // // min-width: 240px;
+  // flex-direction: column;
+  // justify-content: flex-start;
+  width: 100%;
+  max-width: 784px;
+}
+
+@media (max-width: $tablet-width) {
+  .service {
+    width: 100%;
+    max-width: none;
+    &, &.reverse {
+      flex-direction: column;
+    }
+  }
+
+  .serviceImage, .serviceContent {
+    max-width: none;
+  }
+}

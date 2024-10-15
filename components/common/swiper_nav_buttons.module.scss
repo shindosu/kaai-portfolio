@@ -1,0 +1,8 @@
+@import '../global_variable.scss';
+
+.swiperNavButtons {
+  display: flex;
+  align-items: center;
+  gap: 2.5em;
+  cursor: pointer;
+}

@@ -1,0 +1,58 @@
+@import '../global_variable.scss';
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  overflow: visible !important;
+  img {
+    aspect-ratio: 512/662;
+    max-width: 512px;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.topArea {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: 5em;
+  &#workTopArea {
+    align-items: end;
+  }
+  .swiperNavButtons {
+    display: flex;
+    align-items: center;
+    gap: 2.5em;
+  }
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.mobileSwiperNavButtons {
+  display: none;
+  width: 100%;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+@media screen and (max-width: $tablet-width) {
+  .topArea {
+    margin-bottom: 2.5em;
+    .swiperNavButtons {
+      gap: 2em;
+    }
+  }
+
+  .swiperNavButtonContainer {
+    display: none;
+  }
+
+  .mobileSwiperNavButtons {
+    display: flex;
+  }
+
+}

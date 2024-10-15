@@ -1,0 +1,32 @@
+$line-height: 4.5rem;
+$line-height-abs: -4.5rem;
+
+.lineContainer {
+  margin-top: 0.5rem;
+  width: 0.0625rem;
+  height: $line-height;
+  margin: 0.5rem auto 0 auto;
+  overflow: hidden;
+}
+
+.line {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: linear-gradient(to bottom, #E46C74 50%, transparent 50%);
+  background-position: 0 $line-height-abs;
+  background-size: 100% 200%;
+  animation: scrolldown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+}
+
+@keyframes scrolldown {
+  0% {
+    background-position: 0 $line-height-abs;
+  }
+  75% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 $line-height;
+  }
+}
