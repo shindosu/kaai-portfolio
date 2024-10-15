@@ -5,6 +5,12 @@ const nextConfig = {
   // has some troubles with it. See
   // https://github.com/adobe/react-spectrum/labels/strict%20mode
   reactStrictMode: false,
+  images: {
+    domains: [
+      "assets.aceternity.com",
+      "images.ctfassets.net"
+    ],
+  },
 };
 
 module.exports = nextConfig;
