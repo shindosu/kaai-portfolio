@@ -42,7 +42,12 @@ PLASMIC.registerComponent(WorkSlider, {
         title: 'string',
         slug: 'string',
         date: 'string',
-        url: 'string'
+        thumbnail: {
+          type: 'object',
+          fields: {
+            url: 'string',
+          },
+        },
       }
     },
     children: {
