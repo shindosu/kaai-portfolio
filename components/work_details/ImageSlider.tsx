@@ -16,7 +16,6 @@ interface Work {
 }
 
 interface ImageSliderProps {
-    className?: string;
     work: Work;
     thumbnail: { url: string };
     images: { url: string }[];
@@ -30,7 +29,7 @@ interface ImageSliderProps {
     dialogCloseButton: ReactNode;
 }
 
-export function ImageSlider({ className, work, images, leftArrowButton, rightArrowButton, workTitleHeading, children, imageComponent, mobileLeftArrowButton, mobileRightArrowButton, dialogCloseButton }: ImageSliderProps) {
+export function ImageSlider({ work, images, leftArrowButton, rightArrowButton, workTitleHeading, children, imageComponent, mobileLeftArrowButton, mobileRightArrowButton, dialogCloseButton }: ImageSliderProps) {
     const [swiperInstance, setSwiperInstance] = useState<any>(null); // Store the swiper instance
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -70,7 +69,7 @@ export function ImageSlider({ className, work, images, leftArrowButton, rightArr
                 slidesPerView={3}
                 spaceBetween={32}
                 modules={[Navigation, A11y]}
-                className={`${style.swiper} mySwiper ${className}`}
+                className={`${style.swiper} mySwiper`}
                 breakpoints={{
                     319: {
                         slidesPerView: 1,

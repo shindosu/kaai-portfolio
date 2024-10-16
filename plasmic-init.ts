@@ -37,18 +37,19 @@ PLASMIC.registerComponent(WorkSlider, {
     className: 'string',
     works: {
       type: 'array',
-      itemType: 'object',
+      itemType: {
+      type:'object',
       fields: {
         title: 'string',
-        slug: 'string',
         date: 'string',
+        slug: 'string',
         thumbnail: {
           type: 'object',
           fields: {
             url: 'string',
           },
         },
-      }
+      }}
     },
     children: {
       type: 'slot',
@@ -69,31 +70,35 @@ PLASMIC.registerComponent(WorkSlider, {
 PLASMIC.registerComponent(InfiniteCarouselBackground, {
   name: 'InfiniteCarouselBackground',
   props: {
-    className: {
-      type: 'string'
-    },
+    className: 'string',
     children: {
       type: 'slot'
     },
     leftSideImages: {
       type: 'array',
-      itemType: 'object',
-      fields: {
-        imageUrl: 'string', // Changed to 'imageUrl' to match your structure
-      },
+      itemType: {
+        type: 'object',
+        fields: {
+          imageUrl: 'string', // Changed to 'imageUrl' to match your structure
+        }
+      }
     },
     centerImages: {
       type: 'array',
-      itemType: 'object',
-      fields: {
-        imageUrl: 'string', // Changed to 'imageUrl'
-      },
+      itemType: {
+        type: 'object',
+        fields: {
+          imageUrl: 'string', // Changed to 'imageUrl'
+        }
+      }
     },
     rightSideImages: {
       type: 'array',
-      itemType: 'object',
-      fields: {
-        imageUrl: 'string', // Changed to "imageUrl"
+      itemType: {
+        type: 'object',
+        fields: {
+          imageUrl: 'string', // Changed to "imageUrl"
+        }
       },
     },
   },
@@ -102,7 +107,6 @@ PLASMIC.registerComponent(InfiniteCarouselBackground, {
 PLASMIC.registerComponent(ImageSlider, {
   name: "ImageSlider",
   props: {
-    className: 'string',
     work: {
       type: 'object',
       fields: {
@@ -117,10 +121,12 @@ PLASMIC.registerComponent(ImageSlider, {
     },
     images: {
       type: 'array',
-      itemType: 'object',
-      fields: {
-        url: 'string'
-      },
+      itemType: {
+        type: 'object',
+        fields: {
+          url: 'string'
+        }
+    }
     },
     rightArrowButton: {
       type: 'slot'
